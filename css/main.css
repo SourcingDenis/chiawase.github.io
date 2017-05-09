@@ -158,6 +158,7 @@ aside .small-text {
   text-align: center;
   text-transform: uppercase;
   color: #870000;
+  font-size: 2em;
 }
 
 #main .heading::before {
@@ -184,6 +185,8 @@ aside .small-text {
   width: 90%;
   margin: 2em;
   display: flex;
+  padding-bottom: 2em;
+  border-bottom: 1px dashed #a1a1a1;
 }
 
 .project .project-preview {
@@ -341,15 +344,15 @@ aside .small-text {
   }
 
   #main .heading {
-    font-size: 1.25em;
+    font-size: 1.75em;
   }
 
   #main .heading::before {
-    content: "- - - - [ ";
+    content: "- - [ ";
   }
 
   #main .heading::after {
-    content: " ] - - - -";
+    content: " ] - -";
   }
 
   #main .projects {
