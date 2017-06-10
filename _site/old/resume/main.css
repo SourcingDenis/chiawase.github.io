@@ -15,37 +15,57 @@ body {
   display: block;
   background-color: #fff;
   padding: 2em 4em;
-  width: 70%;
+  width: 100%;
   min-height: 100vh;
   height: 100%;
   margin: 0 auto;
+  position: relative;
+}
+
+#saveAsPDFButton {
+  background: #870000;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  padding: 1em;
+  font-family: "Inconsolata", monospace;
+  position: absolute;
+  top: 3em;
+  right: 4em;
+  display: block;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#saveAsPDFButton:hover {
+  background: #960000;
 }
 
 header {
   text-align: center;
-  padding: 1em 3em 2em;
+  padding: 1em 2em 2em;
   border-bottom: #1a1a1a dashed 1px;
 }
 
 .heading {
-  font-size: 3.5em;
+  font-size: 3em;
   font-family: "Inconsolata", monospace;
 }
 
 .subheading {
-  font-size: 1.5em;
-  width: 70%;
+  font-size: 1.25em;
+  width: 90%;
   margin: 0.5em auto 0;
   color: #a1a1a1;
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
 }
 
-.links {
+#links {
   margin-top: 1em;
 }
 
-.links > a {
+#links > a {
   font-family: "Inconsolata", monospace;
   margin: 0 0.5em;
   text-decoration: none;
@@ -54,7 +74,7 @@ header {
   position: relative;
 }
 
-.links > a::after {
+#links > a::after {
   content: " ";
   width: 0;
   height: 1px;
@@ -66,8 +86,8 @@ header {
   transition: all 0.2s;
 }
 
-.links > a:hover::after,
-.links > a:focus::after {
+#links > a:hover::after,
+#links > a:focus::after {
   width: 100%;
 }
 
@@ -76,10 +96,11 @@ header {
   vertical-align: top;
 }
 .left {
-  width: 70%;
+  width: 65%;
 }
 
 .right {
+  margin-left: 5%;
   width: 25%;
 }
 
