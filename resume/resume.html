@@ -30,10 +30,11 @@
 </head>
 <body>
   <div id="main">
+    <button onclick="saveAsPDF();" id="saveAsPDFButton">Save as PDF</button>
     <header>
       <h1 class="heading">Chiara Veronica D. Señires</h1>
       <h3 class="subheading">A front-end web developer and UX designer from the Philippines. Likes drawing from time to time.</h3>
-      <div class="links">
+      <div id="links">
         <a href="http://chisenires.me" title="View my website">chisenires.me</a>
         <a href="http://twitter.com/ChiSenires" title="Follow me on Twitter">twitter</a>
         <a href="http://ph.linkedin.com/in/chisenires" title="Look at my LinkedIn profile">LinkedIn</a>
@@ -121,5 +122,24 @@
       </div>
     </div> <!-- /.right -->
   </div> <!-- /#main -->
+  <script type="text/javascript">
+    function saveAsPDF() {
+      // Hide button
+      document.getElementById('saveAsPDFButton').style.display = 'none';
+      // Only show website link and email
+      let links = document.getElementById('links').children;
+      links[1].style.display = 'none';
+      links[2].style.display = 'none';
+      links[3].style.display = 'none';
+      // make main width to 100%
+      // show print dialog
+      window.print();
+      // put everything back to normal
+      document.getElementById('saveAsPDFButton').style.display = 'block';
+      links[1].style.display = 'inline';
+      links[2].style.display = 'inline';
+      links[3].style.display = 'inline';
+    }
+  </script>
 </body>
 </html>
