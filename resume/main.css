@@ -41,6 +41,36 @@ header {
   font-weight: normal;
 }
 
+.links {
+  margin-top: 1em;
+}
+
+.links > a {
+  font-family: "Inconsolata", monospace;
+  margin: 0 0.5em;
+  text-decoration: none;
+  color: #870000;
+  letter-spacing: 0.015em;
+  position: relative;
+}
+
+.links > a::after {
+  content: " ";
+  width: 0;
+  height: 1px;
+  background-color: #870000;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transition: all 0.2s;
+}
+
+.links > a:hover::after,
+.links > a:focus::after {
+  width: 100%;
+}
+
 .left, .right {
   display: inline-block;
   vertical-align: top;
