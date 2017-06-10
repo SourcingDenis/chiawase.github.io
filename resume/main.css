@@ -12,10 +12,12 @@ body {
 }
 
 #main {
+  display: block;
   background-color: #fff;
   padding: 2em 4em;
   width: 70%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   margin: 0 auto;
 }
 
