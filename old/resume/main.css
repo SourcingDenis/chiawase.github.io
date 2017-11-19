@@ -15,7 +15,7 @@ body {
   background-color: #fff;
   padding: 2em 4em;
   width: 70%;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
 }
 
@@ -37,6 +37,20 @@ header {
   color: #a1a1a1;
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
+}
+
+.links {
+  margin: 1em auto 0;
+}
+
+.links > a {
+  text-decoration: none;
+}
+
+.links > a:not(:last-of-type)::after {
+  content: " / ";
+  margin: 0 0.25em;
+  text-decoration: none;
 }
 
 .left, .right {
@@ -120,6 +134,7 @@ abbr {
 
 .right > * > .set > .item:not(:last-of-type)::after {
   content: "\00B7";
-  margin: 0 0.5em;
+  font-weight: bold;
+  margin: 0 0.25em 0 0.5em;
   color: #a1a1a1;
 }
