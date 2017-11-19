@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Chi Señires | Front-end Web develoepr and UX designer</title>
-  <meta name="description" content="Chi Señires is a front-end web developer and UX designer who likes drawing from time to time.">
+  <title>Chi Señires | UX designer</title>
+  <meta name="description" content="Chi Señires is a UX designer from the Philippines who likes drawing from time to time.">
   <link rel="canonical" href="http://chisenires.me">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Facebook meta tags -->
   <meta property="og:url" content="http://chisenires.me">
-  <meta property="og:description" content="A front-end web developer and UX designer who likes drawing from time to time.">
+  <meta property="og:description" content="UX designer from the Philippines who likes drawing from time to time.">
   <meta property="og:title" content="Chi Señires">
 
   <!-- Twitter card meta tags -->
   <meta property="twitter:url" content="http://chisenires.me">
   <meta property="twitter:card" content="summary">
   <meta property="twitter:title" content="Chi Señires">
-  <meta property="twitter:description" content="A front-end web developer and UX designer who likes drawing from time to time.">
+  <meta property="twitter:description" content="UX designer from the Philippines who likes drawing from time to time.">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Inconsolata:700|Open+Sans:400,700" rel="stylesheet">
@@ -30,23 +30,29 @@
 </head>
 <body>
   <div id="main">
+    <button onclick="saveAsPDF();" id="saveAsPDFButton">Get local copy</button>
     <header>
       <h1 class="heading">Chiara Veronica D. Señires</h1>
-      <h3 class="subheading">A front-end web developer and UX designer from the Philippines. Likes drawing from time to time.</h3>
-      <div class="links">
-        <a target="_blank" href="http://chisenires.me" title="View my website">chisenires.me</a>
-        <!-- <a target="_blank" href="http://twitter.com/ChiSenires" title="Follow me on Twitter">twitter: @ChiSenires</a> -->
-        <!-- <a target="_blank" href="http://ph.linkedin.com/in/chisenires" title="Look at my LinkedIn profile">LinkedIn</a> -->
-        <a target="_blank" href="http://be.net/chiawase" title="Check out my Behance portfolio">be.net/chiawase</a>
-        <a target="_blank" href="mailto:hi.from@chisenires.me" title="Contact me via email">chi.senires@gmail.com</a>
+      <h3 class="subheading">UX designer from the Philippines. Likes drawing from time to time.</h3>
+      <div id="links">
+        <a href="http://chisenires.me" title="View my website">chisenires.me</a>
+        <a href="http://twitter.com/ChiSenires" title="Follow me on Twitter">twitter</a>
+        <a href="http://ph.linkedin.com/in/chisenires" title="Look at my LinkedIn profile">LinkedIn</a>
+        <a href="http://be.net/chiawase" title="Check out my Behance portfolio">Behance</a>
+        <a href="mailto:hi.from@chisenires.me" title="Contact me via email">hi.from@chisenires.me</a>
       </div>
     </header>
     <div class="left">
       <div id="jobs">
         <h2 class="title">What I've done so far</h2>
         <div class="job">
+          <h4 class="job-title">UI/UX Designer</h4>
+          <div class="job-info"><span class="job-location">TrueMoney Philippines</span><span class="job-duration">June 2017 - present</span></div>
+          <p class="job-description">In charge of creating the user interfaces for the different projects of the company.</p>
+        </div>
+        <div class="job">
           <h4 class="job-title">Research Assistant</h4>
-          <div class="job-info"><span class="job-location">Ateneo de Manila University</span><span class="job-duration">Sept 2016 - present</span></div>
+          <div class="job-info"><span class="job-location">Ateneo de Manila University</span><span class="job-duration">Sept 2016 - May 2017</span></div>
           <p class="job-description">Assigned to a project under the Philippine-California Advanced Research Institutes (PCARI). In charge of user experience and user interface design for mobile and web platforms. Also designed training and presentation materials and helped in logistical administrative work.</p>
         </div>
         <div class="job">
@@ -116,5 +122,24 @@
       </div>
     </div> <!-- /.right -->
   </div> <!-- /#main -->
+  <script type="text/javascript">
+    function saveAsPDF() {
+      // Hide button
+      document.getElementById('saveAsPDFButton').style.display = 'none';
+      // Only show website link and email
+      let links = document.getElementById('links').children;
+      links[1].style.display = 'none';
+      links[2].style.display = 'none';
+      links[3].style.display = 'none';
+      // make main width to 100%
+      // show print dialog
+      window.print();
+      // put everything back to normal
+      document.getElementById('saveAsPDFButton').style.display = 'block';
+      links[1].style.display = 'inline';
+      links[2].style.display = 'inline';
+      links[3].style.display = 'inline';
+    }
+  </script>
 </body>
 </html>

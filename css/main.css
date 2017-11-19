@@ -121,6 +121,41 @@ aside .my-links {
   color: #B3B6B7;
 }
 
+.resume-link {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.resume-link a {
+  font-size: 0.9em;
+  border: none;
+}
+
+.resume-link a::before {
+  content: "[ ";
+}
+
+.resume-link a::after {
+  content: " ]";
+}
+
+.resume-link a::before,
+.resume-link a::after {
+  margin: 0 0.15em;
+  font-size: inherit;
+  transition: all 0.2s;
+}
+
+.resume-link a:hover {
+  border: none;
+}
+
+.resume-link a:hover::before,
+.resume-link a:hover::after {
+  margin: 0 0.5em;
+}
+
 aside .small-text {
   text-align: center;
   font-size: 0.8em;
@@ -156,29 +191,22 @@ aside .small-text {
 
 #main .heading {
   text-align: center;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   color: #870000;
+  background-color: #fff;
+  padding: 0.5em;
+  border-radius: 10px;
   font-size: 2em;
-}
-
-#main .heading::before {
-  content: "- - - - - - - - [ ";
-  display: inline-block;
-  color: #333;
-  margin-right: 0.75em;
-}
-
-#main .heading::after {
-  content: " ] - - - - - - - -";
-  display: inline-block;
-  color: #333;
-  margin-left: 0.75em;
+  margin-bottom: 1em;
 }
 
 #main .projects {
   display: block;
-  width: 90%;
+  /*width: 90%;*/
   margin: 0 auto;
+  padding: 0.5em;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .projects .project {
@@ -189,6 +217,10 @@ aside .small-text {
   border-bottom: 1px dashed #a1a1a1;
 }
 
+.projects .project:last-of-type {
+  border-bottom: none;
+}
+
 .project .project-preview {
   display: block;
   background-size: cover;
@@ -196,7 +228,7 @@ aside .small-text {
   width: 40%;
   height: 12em;
   border-radius: 0.25em;
-  box-shadow: 0 3px 6px 2.5px rgba(0,0,0,0.25);
+  box-shadow: 0 0px 15px 5px rgba(0,0,0,0.05);
   flex-grow: 1;
   order: 1;
 }
@@ -345,14 +377,6 @@ aside .small-text {
 
   #main .heading {
     font-size: 1.75em;
-  }
-
-  #main .heading::before {
-    content: "- - [ ";
-  }
-
-  #main .heading::after {
-    content: " ] - -";
   }
 
   #main .projects {
