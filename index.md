@@ -1,6 +1,10 @@
 ---
 layout: default
+title: Chi Señires | UX Designer and front-end web developer
+side_projects: true
 ---
 
-# Hi! I'm **Chi Señires**.
-I'm a **UX designer** at TrueMoney Philippines, and a freelance **front-end developer**.
+![]({{site.url}}/assets/chi.jpg)
+Hi! I'm **Chi Señires**.
+
+I’m a **UI/UX Designer** at [TrueMoney Philippines](https://truemoney.com.ph){:class="tmn"}. I also do **freelance web development** on the side.

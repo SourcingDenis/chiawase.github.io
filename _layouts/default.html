@@ -1,7 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-	{% include head.html %}
+<html lang="en-US">
+  {% include head.html %}
   <body>
-     {{ content }}
+    <div class="container">
+      {{ content }}
+
+      {% if site.data.social-media-links %}
+        <p class="links">
+        {% for link in site.data.social-media-links %}
+          <a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a> {% if forloop.last == false %}&#8226;{% endif %}
+        {% endfor %}
+        </p>
+      {% endif %}
+
+      {% if page.side_projects %}
+        {% include sideline-work.html %}
+      {% endif %}
+    </div>
   </body>
 </html>

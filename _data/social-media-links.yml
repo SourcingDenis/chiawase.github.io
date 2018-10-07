@@ -1,0 +1,11 @@
+#_data/social-media-links.yml
+- title: twitter
+  url: https://twitter.com/ChiSenires
+- title: behance
+  url: https://be.net/chiawase
+- title: github
+  url: https://github.com/chiawase
+- title: linkedin
+  url: http://www.linkedin.com/in/chisenires
+- title: chi@chisenires.me
+  url: 'mailto:chi@chisenires.me'
