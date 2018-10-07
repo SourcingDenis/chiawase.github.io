@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #a1a1a1;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #1a1a1a;
+}
+
+#main {
+  background-color: #fff;
+  padding: 2em 4em;
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 1em 3em 2em;
+  border-bottom: #1a1a1a dashed 1px;
+}
+
+.heading {
+  font-size: 3.5em;
+  font-family: "Inconsolata", monospace;
+}
+
+.subheading {
+  font-size: 1.5em;
+  width: 70%;
+  margin: 0.5em auto 0;
+  color: #a1a1a1;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+}
+
+.left, .right {
+  display: inline-block;
+  vertical-align: top;
+}
+.left {
+  width: 70%;
+}
+
+.right {
+  width: 25%;
+}
+
+.left > *, .right >* {
+  margin-top: 2em;
+}
+
+#main > * > * > .title {
+  text-transform: uppercase;
+  font-family: "Inconsolata", monospace;
+  font-size: 0.9em;
+  margin: 1em 0;
+  color: #a1a1a1;
+  letter-spacing: 5px;
+}
+
+#jobs .job {
+  margin-bottom: 1.5em;
+}
+
+.job .job-title {
+  font-family: "Inconsolata", monospace;
+  font-size: 1.5em;
+  color: #1a1a1a;
+}
+
+.job .job-info {
+  width: 100%;
+  margin: 0.05em 0 0.5em;
+}
+
+.job .job-info > * {
+  color: #a1a1a1;
+  font-size: 0.9em;
+  font-family: "Open Sans", sans-serif;
+}
+
+.job .job-info .job-location::after {
+  content: "//";
+  margin: 0 0.5em;
+}
+
+.job .job-description {
+  font-size: 0.9em;
+  color: #1a1a1a;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 0.5em;
+  width: 90%;
+}
+
+abbr {
+  border-bottom: 0.1em dashed #1a1a1a;
+  cursor: help;
+}
+
+.right > * {
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+.right > * > .set {
+  display: block;
+  width: 100%;
+}
+
+.right > * > .set > .item {
+  color: #1a1a1a;
+  font-size: 0.9em;
+}
+
+.right > * > .set > .item:not(:last-of-type)::after {
+  content: "\00B7";
+  margin: 0 0.5em;
+  color: #a1a1a1;
+}
