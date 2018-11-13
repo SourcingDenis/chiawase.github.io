@@ -173,6 +173,7 @@ abbr {
 
 .right > * > .set > .item:not(:last-of-type)::after {
   content: "\00B7";
-  margin: 0 0.5em;
+  font-weight: bold;
+  margin: 0 0.25em 0 0.5em;
   color: #a1a1a1;
 }
