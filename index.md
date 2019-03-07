@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Chi Señires | UX Designer and front-end web developer
-side_projects: true
+side_projects: false
 ---
 
 ![](assets/chi.jpg)
