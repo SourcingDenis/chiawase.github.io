@@ -111,4 +111,4 @@ a:focus::after {
   margin: 2em auto;
 }
 
-.container .tmn::after { background-color: var(--highlight-orange); }
+.container .employer::after { background-color: var(--highlight-red); }
