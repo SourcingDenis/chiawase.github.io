@@ -8,6 +8,12 @@
 	--red: #EB5757;
 	--highlight-orange: rgba(255, 107, 0, 0.6);
 	--highlight-red: rgba(235, 87, 87, 0.6);
+  --highlight-twitter: rgba(0, 172, 238, 0.6);
+  --highlight-behance: rgba(5, 62, 255, 0.6);
+  --highlight-github: rgba(110, 84, 148, 0.6);
+  --highlight-dribbble: rgba(234, 76, 137, 0.6);
+  --highlight-linkedin: rgba(14, 118, 168, 0.6);
+  --highlight-medium: rgba(0, 171,108, 0.6);
 
   /* Heading Font */
   --heading-font: 'Inconsolata', monospace;
@@ -46,7 +52,7 @@ html, body {
 }
 
 body {
-  background-color: #fff;
+  background-color: #fafafa;
   overflow-x: hidden;
 }
 
@@ -56,6 +62,7 @@ a, a:active {
   width: auto;
   position: relative;
   text-decoration: none;
+  transition: all 200ms ease-in-out;
 }
 
 a::after {
@@ -74,11 +81,22 @@ a::after {
   transition: all 200ms ease-in-out;
 }
 
+a:hover {
+  color: #fff;
+}
+
 a:hover::after,
 a:focus::after {
   margin-top: -1.05em;
   height: 1em;
 }
+
+a.twitter::after { background-color: var(--highlight-twitter); }
+a.behance::after { background-color: var(--highlight-behance); }
+a.github::after { background-color: var(--highlight-github); }
+a.linkedin::after { background-color: var(--highlight-linkedin); }
+a.dribbble::after { background-color: var(--highlight-dribbble); }
+a.medium::after { background-color: var(--highlight-medium); }
 
 .container {
   display: flex;
@@ -87,7 +105,7 @@ a:focus::after {
   width: calc(100vw - (2.5em * 2));
   min-height: calc(100vh - (2.5em * 2));
   height: auto;
-  padding: 2em;
+  padding: 3em;
   border: 3px solid var(--red);
   align-items: center;
   justify-content: center;
@@ -104,6 +122,8 @@ a:focus::after {
   height: 6em;
   margin: 0 auto 1em;
   border-radius: 50%;
+  padding: 0.5rem;
+  border: 4px solid var(--highlight-red);
 }
 
 .container .links {
